@@ -25,7 +25,7 @@ def listener():
 	rospy.init_node('april_tag_detection', anonymous=True)
 
 	bridge = CvBridge()
-	rospy.Subscriber("camera/color/image_raw", Image ,callback, bridge)
+	rospy.Subscriber("camera/depth/image_rect_raw", Image ,callback, bridge)
 	rospy.spin()
 
 	
